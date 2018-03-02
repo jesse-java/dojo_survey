@@ -6,13 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-//import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import javax.servlet.http.HttpSession;
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @SessionAttributes({"name", "location", "language", "comment"})
@@ -21,11 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class DojosurveyApplication {
 
 	public static void main(String[] args) { SpringApplication.run(DojosurveyApplication.class, args);}
-
-//	@ModelAttribute("user")
-//	public User setUpUser() {
-//		return
-//	}
 
 	@RequestMapping("/")
 	public String index()  {
@@ -55,10 +45,6 @@ public class DojosurveyApplication {
 
 	@RequestMapping(value="/result")
 	public String result() {
-//		HttpSession session = request.getSession();
-
-//		System.out.println("printing name");
-//		System.out.println(session.getAttribute("name"));
 		return "result.jsp";
 	}
 
